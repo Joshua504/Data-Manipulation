@@ -15,7 +15,12 @@ func main() {
 		return
 	}
 
-	defer rFile.Close()
+	defer func(rFile *os.File) {
+		err := rFile.Close()
+		if err != nil {
+
+		}
+	}(rFile)
 
 	scanner := bufio.NewScanner(rFile)
 
