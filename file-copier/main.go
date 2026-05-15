@@ -41,7 +41,7 @@ func main() {
 
 	byteCopied, err := io.Copy(dst, src)
 	if err != nil {
-		fmt.Printf("can not copy content from %d to %d", src, dst)
+		fmt.Printf("can not copy content from %v to %v", src, dst)
 		log.Fatal(err)
 	}
 	log.Printf("Successfully copied %d bytes", byteCopied)
